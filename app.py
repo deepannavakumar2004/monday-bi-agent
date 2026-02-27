@@ -1,15 +1,12 @@
 import streamlit as st
 import requests
-import os
 import pandas as pd
-from dotenv import load_dotenv
 from datetime import datetime
 import sqlite3
 import bcrypt
 from openai import OpenAI
 
 # ---------------- CONFIG ----------------
-load_dotenv()
 
 MONDAY_API_KEY = st.secrets["MONDAY_API_KEY"]
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
