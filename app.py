@@ -11,9 +11,8 @@ from openai import OpenAI
 # ---------------- CONFIG ----------------
 load_dotenv()
 
-MONDAY_API_KEY = os.getenv("MONDAY_API_KEY")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
+MONDAY_API_KEY = st.secrets["MONDAY_API_KEY"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 client = OpenAI(
     api_key=GROQ_API_KEY,
     base_url="https://api.groq.com/openai/v1"
